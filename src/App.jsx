@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Footer from './components/Footer.jsx'
 import Hero from './components/Hero.jsx'
 import Navbar from './components/Navbar.jsx'
@@ -17,14 +19,26 @@ function App() {
   }, [])
 
   const addToStack = (technology) => {
-    if (selectedTechnologies.some((item) => item.id === technology.id)) return
+    if (selectedTechnologies.some((item) => item.id === technology.id)) {
+      toast.warning(`${technology.name} is already in your stack.`)
+      return
+    }
+
     setSelectedTechnologies((current) => [...current, technology])
+    toast.success(`${technology.name} added to your stack.`)
   }
 
   const removeFromStack = (technologyId) => {
+    const technology = selectedTechnologies.find((item) => item.id === technologyId)
     setSelectedTechnologies((current) =>
       current.filter((technology) => technology.id !== technologyId),
     )
+    toast.info(`${technology?.name ?? 'Technology'} removed from your stack.`)
+  }
+
+  const removeAllFromStack = () => {
+    setSelectedTechnologies([])
+    toast.info('Your stack has been cleared.')
   }
 
   return (
@@ -38,10 +52,19 @@ function App() {
           isLoading={isLoading}
           onAdd={addToStack}
           onRemove={removeFromStack}
-          onRemoveAll={() => setSelectedTechnologies([])}
+          onRemoveAll={removeAllFromStack}
         />
       </main>
       <Footer />
+      <ToastContainer
+        position="top-right"
+        autoClose={2400}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        theme="light"
+      />
     </div>
   )
 }

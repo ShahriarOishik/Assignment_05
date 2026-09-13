@@ -344,7 +344,7 @@ img {
 }
 
 .technology-card.selected {
-  border-color: #7c3aed;
+  border-color: #e52884;
 }
 
 .card-topline {
@@ -457,7 +457,7 @@ img {
   cursor: not-allowed;
   border-color: #dbe3ec;
   background: #edf2f7;
-  color: #7c3aed;
+  color: #e52884;
 }
 
 .data-state {

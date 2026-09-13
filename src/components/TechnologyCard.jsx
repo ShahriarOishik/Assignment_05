@@ -1,16 +1,11 @@
 import { Check, Plus, Star } from 'lucide-react'
+import TechnologyIcon from './TechnologyIcon.jsx'
 
 function TechnologyCard({ technology, isSelected, onAdd }) {
   return (
     <article className="technology-card">
       <div className="card-topline">
-        <img
-          className="technology-icon"
-          src={technology.icon}
-          alt=""
-          width="38"
-          height="38"
-        />
+        <TechnologyIcon technology={technology} size={38} />
         <span className={`badge badge-${technology.badgeTone}`}>{technology.badge}</span>
       </div>
       <div className="card-copy">

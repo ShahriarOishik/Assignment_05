@@ -1,3 +1,4 @@
+import DataState from './DataState.jsx'
 import StackPanel from './StackPanel.jsx'
 import TechnologyCard from './TechnologyCard.jsx'
 
@@ -5,6 +6,8 @@ function TechnologyDirectory({
   technologies,
   selectedTechnologies,
   isLoading,
+  hasError,
+  onRetry,
   onAdd,
   onRemove,
   onRemoveAll,
@@ -23,7 +26,11 @@ function TechnologyDirectory({
         <div className="directory-layout">
           <div className="technology-grid">
             {isLoading ? (
-              <p className="loading-message">Loading technologies...</p>
+              <DataState type="loading" />
+            ) : hasError ? (
+              <DataState type="error" onRetry={onRetry} />
+            ) : technologies.length === 0 ? (
+              <DataState type="empty" />
             ) : (
               technologies.map((technology) => (
                 <TechnologyCard

@@ -10,13 +10,27 @@ function App() {
   const [technologies, setTechnologies] = useState([])
   const [selectedTechnologies, setSelectedTechnologies] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [loadError, setLoadError] = useState(false)
+  const [reloadKey, setReloadKey] = useState(0)
 
   useEffect(() => {
-    fetch('/data/technologies.json')
-      .then((response) => response.json())
+    const controller = new AbortController()
+
+    fetch('/data/technologies.json', { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Request failed with ${response.status}`)
+        return response.json()
+      })
       .then((data) => setTechnologies(data))
-      .finally(() => setIsLoading(false))
-  }, [])
+      .catch((error) => {
+        if (error.name !== 'AbortError') setLoadError(true)
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setIsLoading(false)
+      })
+
+    return () => controller.abort()
+  }, [reloadKey])
 
   const addToStack = (technology) => {
     if (selectedTechnologies.some((item) => item.id === technology.id)) {
@@ -50,6 +64,12 @@ function App() {
           technologies={technologies}
           selectedTechnologies={selectedTechnologies}
           isLoading={isLoading}
+          hasError={loadError}
+          onRetry={() => {
+            setIsLoading(true)
+            setLoadError(false)
+            setReloadKey((current) => current + 1)
+          }}
           onAdd={addToStack}
           onRemove={removeFromStack}
           onRemoveAll={removeAllFromStack}

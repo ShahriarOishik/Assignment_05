@@ -1,4 +1,5 @@
 import { Layers3, X } from 'lucide-react'
+import TechnologyIcon from './TechnologyIcon.jsx'
 
 function StackPanel({ selectedTechnologies, onRemove, onRemoveAll }) {
   const count = selectedTechnologies.length
@@ -24,7 +25,7 @@ function StackPanel({ selectedTechnologies, onRemove, onRemoveAll }) {
           <ul>
             {selectedTechnologies.map((technology) => (
               <li key={technology.id}>
-                <img src={technology.icon} alt="" width="30" height="30" />
+                <TechnologyIcon technology={technology} size={30} />
                 <div>
                   <strong>{technology.name}</strong>
                   <span>{technology.category}</span>

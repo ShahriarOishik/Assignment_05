@@ -1,15 +1,6 @@
 import logoUrl from '../../assets/logo-text.png'
 
-function Brand({ compact = false }) {
-  if (compact) {
-    return (
-      <span className="brand-compact" aria-label="Dev Stack">
-        <span className="brand-mark" aria-hidden="true">DS</span>
-        <span className="brand-name">DevStack</span>
-      </span>
-    )
-  }
-
+function Brand() {
   return (
     <img
       className="brand-image"

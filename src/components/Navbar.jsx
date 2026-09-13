@@ -54,7 +54,7 @@ function Navbar() {
           <Brand />
         </a>
         <a className="mobile-brand" href="#home" aria-label="Dev Stack home">
-          <Brand compact />
+          <Brand />
         </a>
 
         <ul className="nav-links">

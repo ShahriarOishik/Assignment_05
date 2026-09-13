@@ -14,9 +14,9 @@ function Footer() {
           <Brand />
           <p>Curated tools, technologies, and resources for developers building modern software.</p>
           <div className="social-links">
-            <a href="https://github.com">GitHub</a>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </div>
         {footerGroups.map((group) => (

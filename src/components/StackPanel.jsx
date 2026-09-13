@@ -5,11 +5,11 @@ function StackPanel({ selectedTechnologies, onRemove, onRemoveAll }) {
   const count = selectedTechnologies.length
 
   return (
-    <aside className="stack-panel" aria-label="Your selected technology stack">
+    <aside className="stack-panel" aria-labelledby="stack-title">
       <div className="stack-heading">
         <div>
-          <h2>Your Stack</h2>
-          <p>{count ? `${count} ${count === 1 ? 'Technology' : 'Technologies'} Selected` : 'No technologies selected yet.'}</p>
+          <h2 id="stack-title">Your Stack</h2>
+          <p aria-live="polite">{count ? `${count} ${count === 1 ? 'Technology' : 'Technologies'} Selected` : 'No technologies selected yet.'}</p>
         </div>
         <span className="stack-count">{count}</span>
       </div>
@@ -40,7 +40,12 @@ function StackPanel({ selectedTechnologies, onRemove, onRemoveAll }) {
               </li>
             ))}
           </ul>
-          <button className="remove-all" type="button" onClick={onRemoveAll}>
+          <button
+            className="remove-all"
+            type="button"
+            aria-label={`Remove all ${count} technologies from your stack`}
+            onClick={onRemoveAll}
+          >
             Remove All
           </button>
         </div>

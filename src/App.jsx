@@ -57,8 +57,9 @@ function App() {
 
   return (
     <div className="site-shell">
+      <a className="skip-link" href="#main-content">Skip to main content</a>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <TechnologyDirectory
           technologies={technologies}

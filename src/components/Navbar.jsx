@@ -57,7 +57,11 @@ function Navbar() {
         <ul className="nav-links">
           {navLinks.map((link) => (
             <li key={link}>
-              <a className={link === 'Home' ? 'active' : ''} href={`#${link.toLowerCase()}`}>
+              <a
+                className={link === 'Home' ? 'active' : ''}
+                href={`#${link.toLowerCase()}`}
+                aria-current={link === 'Home' ? 'page' : undefined}
+              >
                 {link}
               </a>
             </li>
@@ -75,6 +79,7 @@ function Navbar() {
               <a
                 className={link === 'Home' ? 'active' : ''}
                 href={`#${link.toLowerCase()}`}
+                aria-current={link === 'Home' ? 'page' : undefined}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link}

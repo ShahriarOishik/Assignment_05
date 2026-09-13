@@ -21,6 +21,8 @@ function TechnologyCard({ technology, isSelected, onAdd }) {
         className="stack-button"
         type="button"
         disabled={isSelected}
+        aria-pressed={isSelected}
+        aria-label={isSelected ? `${technology.name} is in your stack` : `Add ${technology.name} to your stack`}
         onClick={() => onAdd(technology)}
       >
         {isSelected ? <Check size={16} /> : <Plus size={16} />}

@@ -1,4 +1,3 @@
-import { Layers3, X } from 'lucide-react'
 import TechnologyIcon from './TechnologyIcon.jsx'
 
 function StackPanel({ selectedTechnologies, onRemove, onRemoveAll }) {
@@ -16,7 +15,7 @@ function StackPanel({ selectedTechnologies, onRemove, onRemoveAll }) {
 
       {count === 0 ? (
         <div className="empty-stack">
-          <Layers3 size={30} />
+          <span className="empty-stack-icon" aria-hidden="true">◫</span>
           <p>Your stack is empty.</p>
           <span>Add technologies to start building.</span>
         </div>
@@ -35,7 +34,7 @@ function StackPanel({ selectedTechnologies, onRemove, onRemoveAll }) {
                   aria-label={`Remove ${technology.name} from stack`}
                   onClick={() => onRemove(technology.id)}
                 >
-                  <X size={18} />
+                  ✕
                 </button>
               </li>
             ))}

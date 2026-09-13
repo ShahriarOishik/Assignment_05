@@ -500,8 +500,31 @@ img {
 }
 
 .loading-spinner {
-  color: #d91e72;
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #d91e72;
+  border-radius: 50%;
   animation: spin 800ms linear infinite;
+}
+
+.error-icon {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.empty-stack-icon {
+  display: inline-block;
+  font-size: 30px;
+  color: #a1aec0;
 }
 
 @keyframes spin {

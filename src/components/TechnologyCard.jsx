@@ -1,12 +1,13 @@
-import { Check, Plus, Star } from 'lucide-react'
 import TechnologyIcon from './TechnologyIcon.jsx'
+
+const badgeColor = { Popular: 'blue', Versatile: 'green', Fast: 'orange', 'Full Stack': 'violet', Standard: 'green', 'Top SQL': 'blue', Cache: 'red', Ubiquitous: 'yellow', Essential: 'blue', Robust: 'blue', Modern: 'cyan', Containers: 'blue' }
 
 function TechnologyCard({ technology, isSelected, onAdd }) {
   return (
     <article className="technology-card">
       <div className="card-topline">
         <TechnologyIcon technology={technology} size={38} />
-        <span className={`badge badge-${technology.badgeTone}`}>{technology.badge}</span>
+        <span className={`badge badge-${badgeColor[technology.badge] || 'blue'}`}>{technology.badge}</span>
       </div>
       <div className="card-copy">
         <h3>{technology.name}</h3>
@@ -15,7 +16,7 @@ function TechnologyCard({ technology, isSelected, onAdd }) {
       <div className="technology-meta">
         <span className="category-chip">{technology.category}</span>
         <span>{technology.difficulty}</span>
-        <span className="rating"><Star size={13} fill="currentColor" /> {technology.rating}</span>
+        <span className="rating">★ {technology.rating}</span>
       </div>
       <button
         className="stack-button"
@@ -25,7 +26,7 @@ function TechnologyCard({ technology, isSelected, onAdd }) {
         aria-label={isSelected ? `${technology.name} is in your stack` : `Add ${technology.name} to your stack`}
         onClick={() => onAdd(technology)}
       >
-        {isSelected ? <Check size={16} /> : <Plus size={16} />}
+        {isSelected ? '✓ ' : '+ '}
         {isSelected ? 'Added to Stack' : 'Add to Stack'}
       </button>
     </article>

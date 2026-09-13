@@ -7,8 +7,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular",
-    "badgeTone": "blue"
+    "badge": "Popular"
   },
   {
     "id": "vuejs",
@@ -18,8 +17,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Versatile",
-    "badgeTone": "green"
+    "badge": "Versatile"
   },
   {
     "id": "svelte",
@@ -29,8 +27,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Fast",
-    "badgeTone": "orange"
+    "badge": "Fast"
   },
   {
     "id": "nextjs",
@@ -40,8 +37,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Full Stack",
-    "badgeTone": "violet"
+    "badge": "Full Stack"
   },
   {
     "id": "nodejs",
@@ -51,8 +47,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Standard",
-    "badgeTone": "green"
+    "badge": "Standard"
   },
   {
     "id": "postgresql",
@@ -62,8 +57,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Top SQL",
-    "badgeTone": "blue"
+    "badge": "Top SQL"
   },
   {
     "id": "redis",
@@ -73,8 +67,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Cache",
-    "badgeTone": "red"
+    "badge": "Cache"
   },
   {
     "id": "javascript",
@@ -84,8 +77,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Ubiquitous",
-    "badgeTone": "yellow"
+    "badge": "Ubiquitous"
   },
   {
     "id": "typescript",
@@ -95,8 +87,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Essential",
-    "badgeTone": "blue"
+    "badge": "Essential"
   },
   {
     "id": "java",
@@ -106,8 +97,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
     "rating": 4.6,
     "difficulty": "Intermediate",
-    "badge": "Robust",
-    "badgeTone": "blue"
+    "badge": "Robust"
   },
   {
     "id": "tailwindcss",
@@ -117,8 +107,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Modern",
-    "badgeTone": "cyan"
+    "badge": "Modern"
   },
   {
     "id": "docker",
@@ -128,7 +117,6 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Containers",
-    "badgeTone": "blue"
+    "badge": "Containers"
   }
 ]

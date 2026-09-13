@@ -1,10 +1,8 @@
-import { AlertCircle, LoaderCircle, RefreshCw } from 'lucide-react'
-
 function DataState({ type, onRetry }) {
   if (type === 'loading') {
     return (
       <div className="data-state" role="status">
-        <LoaderCircle className="loading-spinner" size={34} />
+        <span className="loading-spinner" aria-hidden="true"></span>
         <strong>Loading technologies</strong>
         <span>Gathering the tools for your stack...</span>
       </div>
@@ -14,11 +12,11 @@ function DataState({ type, onRetry }) {
   if (type === 'error') {
     return (
       <div className="data-state data-error" role="alert">
-        <AlertCircle size={34} />
+        <span className="error-icon" aria-hidden="true">!</span>
         <strong>Technologies could not be loaded</strong>
         <span>Check your connection and try again.</span>
         <button type="button" onClick={onRetry}>
-          <RefreshCw size={14} /> Try Again
+          ↻ Try Again
         </button>
       </div>
     )
@@ -26,7 +24,7 @@ function DataState({ type, onRetry }) {
 
   return (
     <div className="data-state">
-      <AlertCircle size={34} />
+      <span className="error-icon" aria-hidden="true">!</span>
       <strong>No technologies found</strong>
       <span>New tools will appear here when they are available.</span>
     </div>

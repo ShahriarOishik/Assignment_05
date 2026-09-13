@@ -16,7 +16,6 @@ Dev Stack Builder is a responsive React application for exploring modern develop
 - Vite
 - Tailwind CSS
 - React-Toastify
-- Lucide React
 - JSON
 
 ## Key Features

@@ -129,6 +129,12 @@ img {
   display: none;
 }
 
+.brand-compact {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
 .brand-mark {
   display: grid;
   width: 34px;
@@ -139,6 +145,15 @@ img {
   color: white;
   font-size: 13px;
   font-weight: 800;
+}
+
+.brand-name {
+  color: #101828;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .nav-links {

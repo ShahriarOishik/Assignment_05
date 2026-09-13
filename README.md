@@ -4,7 +4,10 @@ Dev Stack Builder is a responsive React application for exploring modern develop
 
 ## Live Preview
 
-Run the project locally with the setup instructions below. A hosted URL can be added here after deployment.
+- Production: `https://ShahriarOishik.github.io/Assignment_05/` (GitHub Pages, deploys on push to `main` via `.github/workflows/deploy.yml`)
+- Local: run `npm run dev` and open the Vite URL
+
+> If Pages shows 404 briefly after the first push, enable Pages in repository Settings → Pages → Source: GitHub Actions, then re-run the workflow.
 
 ## Technologies Used
 

@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react'
 import bannerUrl from '../../assets/banner-stack.png'
 
 function Hero() {
@@ -15,7 +14,7 @@ function Hero() {
         </p>
         <div className="hero-actions">
           <a className="primary-button" href="#technologies">
-            Explore Technologies <ArrowRight size={16} />
+            Explore Technologies
           </a>
           <a className="secondary-button" href="#about">Learn More</a>
         </div>

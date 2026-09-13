@@ -702,7 +702,7 @@ img {
   .section-heading h2 { justify-content: center; font-size: 30px; }
   .directory-layout { display: flex; flex-direction: column; }
   .technology-grid { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .stack-panel { position: static; order: -1; width: 100%; }
+  .stack-panel { position: static; width: 100%; }
   .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; gap: 38px; }
   .footer-brand { grid-column: 1 / -1; }
 }
@@ -712,15 +712,28 @@ img {
   .auth-actions { gap: 6px; }
   .auth-actions button { font-size: 10px; }
   .auth-actions .primary-pill { padding: 8px 10px; }
-  .hero { padding-top: 34px; }
-  .hero-copy h1 { font-size: 38px; }
+  .hero { gap: 6px; padding-block: 31px 40px; }
+  .hero-copy h1 { max-width: 350px; font-size: 36px; line-height: 1.05; }
   .hero-copy > p { font-size: 14px; line-height: 1.6; }
-  .hero-actions { gap: 10px; }
+  .hero-actions { gap: 10px; margin-top: 24px; }
   .primary-button, .secondary-button { min-height: 44px; padding: 0 14px; font-size: 11px; }
+  .hero-visual { margin-top: 0; }
+  .hero-visual img { width: min(76vw, 296px); }
+  .directory-section { padding-top: 4px; }
+  .section-heading { margin-bottom: 24px; }
+  .section-heading .eyebrow { display: none; }
   .section-heading h2 { display: block; font-size: 28px; }
   .section-heading h2 span { margin: 2px auto 0; }
+  .section-heading > p:last-child { max-width: 330px; margin: 9px auto 0; font-size: 13px; line-height: 1.5; }
+  .directory-layout { gap: 20px; }
   .technology-grid { grid-template-columns: 1fr; gap: 14px; }
-  .technology-card { min-height: 270px; }
+  .technology-card { min-height: 244px; padding: 18px; border-radius: 12px; }
+  .technology-card:hover { translate: 0; }
+  .card-copy h3 { margin-top: 14px; }
+  .card-copy p { font-size: 12px; }
+  .technology-meta { min-height: 38px; margin-top: 10px; }
+  .stack-button { height: 38px; }
+  .stack-panel { padding: 20px; border-radius: 12px; }
   .footer { padding-top: 48px; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 34px 28px; }
   .footer-group:last-child { grid-column: 1 / -1; }

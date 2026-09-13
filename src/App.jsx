@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const controller = new AbortController()
 
-    fetch('/data/technologies.json', { signal: controller.signal })
+    fetch(`${import.meta.env.BASE_URL}data/technologies.json`, { signal: controller.signal })
       .then((response) => {
         if (!response.ok) throw new Error(`Request failed with ${response.status}`)
         return response.json()

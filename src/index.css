@@ -343,6 +343,10 @@ img {
   box-shadow: 0 18px 35px rgb(16 24 40 / 8%);
 }
 
+.technology-card.selected {
+  border-color: #7c3aed;
+}
+
 .card-topline {
   display: flex;
   min-height: 40px;
@@ -453,7 +457,7 @@ img {
   cursor: not-allowed;
   border-color: #dbe3ec;
   background: #edf2f7;
-  color: #718096;
+  color: #7c3aed;
 }
 
 .data-state {
@@ -521,12 +525,6 @@ img {
   font-weight: 700;
 }
 
-.empty-stack-icon {
-  display: inline-block;
-  font-size: 30px;
-  color: #a1aec0;
-}
-
 @keyframes spin {
   to { rotate: 360deg; }
 }
@@ -583,18 +581,14 @@ img {
   margin-top: 16px;
   border: 1px dashed #dce3ec;
   border-radius: 11px;
-  color: #a1aec0;
+  color: #dce3ec;
   text-align: center;
 }
 
 .empty-stack p {
-  margin: 8px 0 2px;
+  margin: 0;
   font-size: 13px;
   font-weight: 650;
-}
-
-.empty-stack span {
-  font-size: 10px;
 }
 
 .selected-stack ul {

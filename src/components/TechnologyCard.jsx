@@ -4,7 +4,7 @@ const badgeColor = { Popular: 'blue', Versatile: 'green', Fast: 'orange', 'Full 
 
 function TechnologyCard({ technology, isSelected, onAdd }) {
   return (
-    <article className="technology-card">
+    <article className={`technology-card${isSelected ? ' selected' : ''}`}>
       <div className="card-topline">
         <TechnologyIcon technology={technology} size={38} />
         <span className={`badge badge-${badgeColor[technology.badge] || 'blue'}`}>{technology.badge}</span>
@@ -26,7 +26,7 @@ function TechnologyCard({ technology, isSelected, onAdd }) {
         aria-label={isSelected ? `${technology.name} is in your stack` : `Add ${technology.name} to your stack`}
         onClick={() => onAdd(technology)}
       >
-        {isSelected ? '✓ ' : '+ '}
+        {isSelected ? '✓ ' : ''}
         {isSelected ? 'Added to Stack' : 'Add to Stack'}
       </button>
     </article>

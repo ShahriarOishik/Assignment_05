@@ -16,6 +16,7 @@ function TechnologyDirectory({
 
   return (
     <section className="directory-section" id="technologies">
+      <span id="projects" aria-hidden="true" />
       <div className="container">
         <div className="section-heading">
           <p className="eyebrow">Build with confidence</p>

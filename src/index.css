@@ -853,4 +853,13 @@ img {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  .Toastify__toast,
+  .Toastify__toast *,
+  .Toastify__progress-bar,
+  .Toastify__progress-bar * {
+    animation-duration: unset !important;
+    animation-iteration-count: unset !important;
+    transition-duration: unset !important;
+  }
 }

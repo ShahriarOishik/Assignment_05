@@ -849,17 +849,27 @@ img {
   *::before,
   *::after {
     scroll-behavior: auto !important;
+  }
+
+  .technology-card,
+  .technology-card * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 
-  .Toastify__toast,
-  .Toastify__toast *,
-  .Toastify__progress-bar,
-  .Toastify__progress-bar * {
-    animation-duration: unset !important;
-    animation-iteration-count: unset !important;
-    transition-duration: unset !important;
+  .primary-button,
+  .secondary-button,
+  .primary-button *,
+  .secondary-button * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .skip-link {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
